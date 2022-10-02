@@ -1,6 +1,5 @@
 const number = Math.floor(Math.random() * 10) + 1;
 
-
 const number_box = document.getElementById("number-box")
 const submit_box = document.getElementById("submit-box")
                            .addEventListener("click", () => {check_guess()})
@@ -18,6 +17,10 @@ function check_guess() {
     
     else if(guess < number) {
         message = "Guess Higher"
+    }
+
+    else {
+        message = "You Win"
     }
 
     results_box.innerHTML = message
